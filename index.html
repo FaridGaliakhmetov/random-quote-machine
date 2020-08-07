@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://kit.fontawesome.com/7912a3fc19.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+
+<div id="height">
+<div id="quote-box">
+  
+  <p><i class="fas fa-quote-left"></i><span id="text"></span></p>
+  <p id="author"></p>
+  <a id="tweet-quote" href="https://www.twitter.com/intent/tweet"><i class="fab fa-twitter-square"></i></a>
+  <a href="https://www.tumblr.com/widgets/share/tool"><i class="fab fa-tumblr-square"></i></a>
+  <button id="new-quote">New quote</button>
+  
+</div>
+<p>by Farid</p>
+</div>
+
+<script>
+var color = ["red","blue","yellow","pink"];
+var arr=["- Buddha","- Pablo Picasso","- Jamie Paolinetti","- Gloria Steinem"];
+var ob={
+            "- Buddha": "The mind is everything. What you think you become.",
+     "- Pablo Picasso": "Every child is an artist. The problem is how to remain an artist once he grows up.",
+  "- Jamie Paolinetti": "Limitations live only in our minds. But if we use our imaginations, our possibilities become limitless.",
+    "- Gloria Steinem": "Dreaming, after all, is a form of planning."
+  
+}
+function rand(){           // функция выбирает случайный элемент(автор) из массива arr и цитату из объекта ob и выводит на экран
+    var aut = arr[Math.floor(Math.random() * (arr.length - 0)) + 0];
+	var backColor = color[Math.floor(Math.random() * (color.length - 0)) + 0];
+	author.innerHTML = aut;
+	text.innerHTML =  ob[aut];
+	backC.style.backgroundColor = backColor;
+}
+var text = document.getElementById("text");
+var author = document.getElementById("author");
+var backC = document.getElementById("body");
+var button = document.getElementById("new-quote");
+
+rand();
+button.addEventListener("click", function(){rand();});
+
+
+
+</script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
