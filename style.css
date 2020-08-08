@@ -9,13 +9,38 @@ body {
 	flex-direction:column;
 	align-items:center;
 	justify-content:center;
-	border:1px solid white;
 	position:fixed;
 	height:100%;
 	width:100%;
+	text-align:center;
 }
 #quote-box {
   width:35%;
-  height:200px;
-  background-color:white
+  min-height:200px;
+  background-color:white;
+  padding:35px;
+  border-radius:5px;
+}
+#text,.fas {
+	
+	font-size:35px;
+}
+#author {
+	text-align:right;
+}
+#buttons {
+	display:flex;
+	justify-content:space-between;
+}
+.slink {
+	color:green;
+	font-size:35px;
+	border-radius:5px;
+}
+#new-quote {
+	height:33px;
+	background-color:green;
+	border:none;
+	border-radius:5px;
+	color:white;
 }

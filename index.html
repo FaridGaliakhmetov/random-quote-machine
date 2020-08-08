@@ -14,10 +14,13 @@
   
   <p><i class="fas fa-quote-left"></i><span id="text"></span></p>
   <p id="author"></p>
-  <a id="tweet-quote" href="https://www.twitter.com/intent/tweet"><i class="fab fa-twitter-square"></i></a>
-  <a href="https://www.tumblr.com/widgets/share/tool"><i class="fab fa-tumblr-square"></i></a>
-  <button id="new-quote">New quote</button>
-  
+  <div id="buttons">
+    <div id="rf">
+      <a class="slink" id="tweet-quote" href="https://www.twitter.com/intent/tweet"><i class="fab fa-twitter-square"></i></a>
+      <a class="slink" href="https://www.tumblr.com/widgets/share/tool"><i class="fab fa-tumblr-square"></i></a>
+	</div>  
+    <button  id="new-quote">New quote</button>
+  </div>
 </div>
 <p>by Farid</p>
 </div>
@@ -36,7 +39,7 @@ function rand(){           // функция выбирает случайный
     var aut = arr[Math.floor(Math.random() * (arr.length - 0)) + 0];
 	var backColor = color[Math.floor(Math.random() * (color.length - 0)) + 0];
 	author.innerHTML = aut;
-	text.innerHTML =  ob[aut];
+	text.innerHTML =  " "+ob[aut];
 	backC.style.backgroundColor = backColor;
 }
 var text = document.getElementById("text");
