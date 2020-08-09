@@ -11,18 +11,17 @@
 
 <div id="height">
 <div id="quote-box">
-  
-  <p><i class="fas fa-quote-left"></i><span id="text"></span></p>
-  <p id="author"></p>
+  <p class="c"><i class="fas fa-quote-left"></i><span id="text"></span></p>
+  <p class="c" id="author"></p>
   <div id="buttons">
     <div id="rf">
-      <a class="slink" id="tweet-quote" href="https://www.twitter.com/intent/tweet"><i class="fab fa-twitter-square"></i></a>
-      <a class="slink" href="https://www.tumblr.com/widgets/share/tool"><i class="fab fa-tumblr-square"></i></a>
+      <a class="slink c" id="tweet-quote" href="https://www.twitter.com/intent/tweet"><i class="fab fa-twitter-square"></i></a>
+      <a class="slink c" href="https://www.tumblr.com/widgets/share/tool"><i class="fab fa-tumblr-square"></i></a>
 	</div>  
     <button  id="new-quote">New quote</button>
   </div>
 </div>
-<p>by Farid</p>
+<p style="color:white">by Farid</p>
 </div>
 
 <script>
@@ -41,18 +40,19 @@ function rand(){           // функция выбирает случайный
 	author.innerHTML = aut;
 	text.innerHTML =  " "+ob[aut];
 	backC.style.backgroundColor = backColor;
+	nQuote.style.backgroundColor = backColor;
+	for(var i=0;i<lin.length;i++){  
+	  lin[i].style.color = backColor;
+	}
 }
 var text = document.getElementById("text");
 var author = document.getElementById("author");
 var backC = document.getElementById("body");
 var button = document.getElementById("new-quote");
-
+var nQuote = document.getElementById("new-quote");
+var lin = document.querySelectorAll(".c");
 rand();
 button.addEventListener("click", function(){rand();});
-
-
-
 </script>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>

@@ -33,13 +33,11 @@ body {
 	justify-content:space-between;
 }
 .slink {
-	color:green;
 	font-size:35px;
 	border-radius:5px;
 }
 #new-quote {
 	height:33px;
-	background-color:green;
 	border:none;
 	border-radius:5px;
 	color:white;
